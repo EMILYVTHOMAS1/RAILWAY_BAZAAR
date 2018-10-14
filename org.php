@@ -70,7 +70,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 	<div class="center-container">
 	    <div class="w3ls-agileinfo">
 		
-          <h1> RAILWAY BAZAAR</h1>	
+          <h1> RAILWAY_BAZAAR</h1>	
 		  </div>
 		 <div class="bg-agile">
 		 <div class="top-icons-agileits-w3layouts">
