@@ -2,7 +2,7 @@
 Railway Bazaar is an online shopping site that can be used for shopping while traveling on the train.
 This project is created for the passengers who travelled through train as their travelling medium.
 In current railway system there is no provision to purchase anything while travelling.
-Because currently there is no online options are available.This project is created to solve the
+Because currently there is no online options available.This project is created to solve the
  above mentioned problem.In our proposed system, the software has a provision to register hotels, 
 shopping malls, stores etc.During the registration they have to fill the details of nearest railway station.
 After approval they can add their product details to the portal.While travelling,
