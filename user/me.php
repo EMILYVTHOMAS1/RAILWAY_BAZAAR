@@ -1,72 +1,32 @@
 <?php
-ob_start();
 include("../connection.php");
 session_start();
 $user_name=$_SESSION['user'];
+$tr=$_SESSION['train'];
+
  if($user_name=$_SESSION['user'])
  {
      
  }
  else {
-header("location:../index.php");     
+header("location:../index.php");   
 }
 ?>
 <?php
-if(isset($_GET['pl']))
+if(isset($_POST['b1']))
 {
-    $del1=mysqli_query($con,"update cart1 set qnty=qnty+1 where id='".$_GET['pl']."'");
-    //echo mysql_error();
-    if($del1>0)
+    $t1=$_POST['t1'];
+    $t2=$_POST['t2'];
+    $t3=$_POST['t3'];
+    $ord=mysqli_query($con,"update cart1 set st='0',train_num='$tr',coach='$t2',seat='$t3' where st='6' and nme='$user_name'");
+    if($ord>0)
     {
-        header("location:wishlist.php");   
+        header("location:categories.php");   
 }
-}
-                            
 
-                            
-    ?>
-<?php
-if(isset($_GET['mi']))
-{
-    $del1=mysqli_query($con,"update cart1 set qnty=qnty-1 where id='".$_GET['mi']."'");
-    //echo mysql_error();
-    if($del1>0)
-    {
-        header("location:wishlist.php");   
 }
-}
-                            
+?>
 
-                            
-    ?>
-<?php
-if(isset($_GET['del_cart']))
-{
-    $delc=mysqli_query($con,"delete from cart1 where id='".$_GET['del_cart']."'");
-    //echo mysql_error();
-    if($delc>0)
-    {
-        
-}
-}
-                            
-
-                            
-    ?>
-<?php
-if(isset($_GET['upd']))
-{
-    $del1=mysqli_query($con,"update cart1 set st='6' where id='".$_GET['upd']."'");
-    //echo mysql_error();
-    if($del1>0)
-    {
-        header("location:wishlist.php");   
-}
-}
-                            
-
-                            
-    ?>
 <!--
 Author: W3layouts
 Author URL: http://w3layouts.com
@@ -76,7 +36,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE html>
 <html>
 <head>
-<title>Big store a Ecommerce Online Shopping Category Flat Bootstrap Responsive Website Template | About :: w3layouts</title>
+<title>Big store a Ecommerce Online Shopping Category Flat Bootstrap Responsive Website Template | Register :: w3layouts</title>
 <!-- for-mobile-apps -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -135,168 +95,49 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 
 </head>
 <body>
-    
     <?php
     
         include 'menu.php';
     ?>
-   <!--banner-->
+     <!--banner-->
 <div class="banner-top">
 	<div class="container">
-		<h3 >Wishlist</h3>
-		<h4><a href="../temp/index.html">Home</a><label>/</label>Wishlist</h4>
+		<h3 >Register</h3>
+		<h4><a href="../temp/index.html">Home</a><label>/</label>Register</h4>
 		<div class="clearfix"> </div>
 	</div>
 </div>
 
-	<!-- contact -->
-		<div class="check-out">	 
-		<div class="container">	 
-	 <div class="spec ">
-				<h3>Purchase Track</h3>
-					<div class="ser-t">
-						<b></b>
-						<span><i></i></span>
-						<b class="line"></b>
-					</div>
+<!--login-->
+
+	<div class="login">
+		<div class="main-agileits">
+				<div class="form-w3agile form1">
+					<h3>Register</h3>
+					<form method="post">
+						<div class="key">
+							<i class="fa fa-user" aria-hidden="true"></i>
+							<input  type="text" value="<?php echo $tr ?>" name="t1" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Username';}" required="">
+							<div class="clearfix"></div>
+						</div>
+						<div class="key">
+							<i class="fa fa-user" aria-hidden="true"></i>
+                                                        <input  type="text" value="Coach Number" name="t2" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Username';}" required="">
+							<div class="clearfix"></div>
+						</div>
+						<div class="key">
+							<i class="fa fa-user" aria-hidden="true"></i>
+                                                        <input  type="text" value="Seat Number" name="t3" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Username';}" required="">
+							<div class="clearfix"></div>
+						</div>
+						
+						
+						<input type="submit" value="Submit"name="b1">
+					</form>
+				</div>
+				
 			</div>
-				<script>$(document).ready(function(c) {
-					$('.close1').on('click', function(c){
-						$('.cross').fadeOut('slow', function(c){
-							$('.cross').remove();
-						});
-						});	  
-					});
-			   </script>
-			<script>$(document).ready(function(c) {
-					$('.close2').on('click', function(c){
-						$('.cross1').fadeOut('slow', function(c){
-							$('.cross1').remove();
-						});
-						});	  
-					});
-			   </script>	
-			   <script>$(document).ready(function(c) {
-					$('.close3').on('click', function(c){
-						$('.cross2').fadeOut('slow', function(c){
-							$('.cross2').remove();
-						});
-						});	  
-					});
-			   </script>
-                            <?php
-    $sel20=  mysqli_query($con,"select * from cart1 where nme='$user_name' and st!='5' and st!='6' order by id desc");
-    if(mysqli_num_rows($sel20)>0)
-    {
-        ?>
- <table class="table ">
-		  <tr>
-			<th class="t-head head-it ">Products</th>
-			<th class="t-head">Price</th>
-		<th class="t-head">Quantity</th>
-
-			<th class="t-head">Purchase</th>
-		  </tr>
-                  
-                 
-                   <?php
-    $i=0;
-        while ($r14=  mysqli_fetch_row($sel20))
-                
-        {
-            $pro=  mysqli_query($con,"select * from add_product where product='$r14[2]' and name='$r14[5]'");
-            $pro1=  mysqli_fetch_row($pro);
-            $i++;
-            ?>
-		  <tr class="cross">
-			<td class="ring-in t-data">
-				<a href="#" class="at-in">
-                                    <img src="../product/<?php echo $pro1[2] ?>" style="width: 130px;height: 120px"class="img-responsive" alt="">
-				</a>
-			<div class="sed">
-				<h5><?php echo $r14[2] ?></h5>
-			</div>
-				<div class="clearfix"> </div>
-				<div class="close1"> <i class="fa fa-times" aria-hidden="true"></i></div>
-			 </td>
-			<td class="t-data"><?php
-                        $qn=$r14[8];
-                        $pr=$r14[3];
-                        $tp=$pr*$qn;
-                        echo "$tp";
-                        ?> Rs/-</td>
-			<td class="t-data"><div class="quantity"> 
-								<div class="quantity-select">            
-                                                                    
-										<div class="entry value"><span class="span-1"><?php echo $r14[8]  ?></span></div>									
-                                                                                
-								</div>
-							</div>
-			
-			</td>
-
-                            <td class="t-data t-w3l">
-                
-                                
-                                
-                                <?php
-        if ($r14[10]=='0')
-        {
-            ?>
-                                <i><img style="width: 45px;height: 40px" src="../gif/WaitCover.gif"><font style="font-size: large" color='orange'>&nbsp;&nbsp;Waiting for response</font></i>
-            <?php
-        }
-        ?>
-        <?php
-             if ($r14[10]=='1')
-        {
-                 ?>
-             
-                                <i><img style="width: 45px;height: 40px" src="../gif/checkmark.gif"><font style="font-size: large" color='orange'>&nbsp;&nbsp;<font  color='green'>Order Approved</font></i>
-            
-            <?php
-        }
-        ?>
-            <?php
-            
-         if ($r14[10]=='2')
-        {
-             
-         ?>
-                                <i><img style="width: 45px;height: 40px" src="../gif/Dont_symbol_wobble_lg_clr.gif"><font style="font-size: large" color='orange'>&nbsp;&nbsp;<font color='Red'>Order denied</font></i>
-                  <?php
-        }
-            
-            ?>
-                        </td>
-			
-		  </tr>
-		  <?php
-        }
-        ?>
-		  
-	</table>
-                           <?php
-    }
-    ?>
-		 </div>
-		 </div>
-		 				
-	<!--quantity-->
-			<script>
-			$('.value-plus').on('click', function(){
-				var divUpd = $(this).parent().find('.value'), newVal = parseInt(divUpd.text(), 10)+1;
-				divUpd.text(newVal);
-			});
-
-			$('.value-minus').on('click', function(){
-				var divUpd = $(this).parent().find('.value'), newVal = parseInt(divUpd.text(), 10)-1;
-				if(newVal>=1) divUpd.text(newVal);
-			});
-			</script>
-			<!--quantity-->
-			
-
+		</div>
 <!--footer-->
 <div class="footer">
 	<div class="container">
