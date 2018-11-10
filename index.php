@@ -37,6 +37,9 @@ if(isset($_POST['b1']))
         header("location:index.php?error='1'"); 
     }
 }
+ else {
+   header("location:index.php?fail=1"); 
+}
 $sel6=mysqli_query($con,"select * from shop_reg where user_id='$user_name' and passwd='$p'");
 if(mysqli_num_rows($sel6)>0)
 {
@@ -70,7 +73,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE html>
 <html>
 <head>
-<title>RAILWAY BAZAAR++</title>
+<title>Railway Bazaar</title>
 <!-- Meta tag Keywords -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -98,7 +101,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 		  </div>
 		 <div class="bg-agile">
 		 <div class="top-icons-agileits-w3layouts">
-                     <a href="index.php"><p><i class="fa fa-home" aria-hidden="true"></i></p></a>
+                         <a href="index.php"><p><i class="fa fa-home" aria-hidden="true"></i></p></a>
 			<span></span>
                         <a href="usr.php"><p class="mid-w3ls"><i class="fa fa-user" aria-hidden="true"></i></p></a>
 			<span></span>
@@ -111,14 +114,26 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 			 </ul>
 		 </div>
 			<h2>Login to your account if you are already Registered. </h2>
-			<h3>Login Form</h3>
+                        
+                        <h3>Login Form</h3>
+                        <?php
+                        if(isset($_GET['fail']))
+                        
+                        {
+                        ?>
+                        <h4><span style="color: red">Incorrect Username/Password </span></h4>
+                        <?php
+                        }
+                        ?>
 			<div class="login-form">			
 							<form  method="post">
 								<input type="text"  name="u" placeholder="Username" required="" />
 								<input type="password" class="form-control"  name="p" placeholder="Password" required="" />
 								
+                                                                <a href="pass.php"><span style="float: right">Forget Password?</span></a>
 								
 								<input type="submit"name="b1" value="Submit">
+                                                                
 							</form>	
 						</div>	
 		</div>
@@ -126,7 +141,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 	<!-- //banner --> 
 	 <!--copyright-->
 		<div class="copy w3ls">
-                   
+		    <p>> </p>
 	    </div>
 	<!--//copyright-->
 	</div>	
