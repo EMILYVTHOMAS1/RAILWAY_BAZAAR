@@ -208,7 +208,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
             $pro1=  mysqli_fetch_row($pro);
             $i++;
             ?>
-		  <tr class="cross">
+		  <tr>
 			<td class="ring-in t-data">
 				<a href="#" class="at-in">
                                     <img src="../product/<?php echo $pro1[2] ?>" style="width: 130px;height: 120px"class="img-responsive" alt="">
@@ -216,8 +216,8 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 			<div class="sed">
 				<h5><?php echo $r14[2] ?></h5>
 			</div>
-				<div class="clearfix"> </div>
-				<div class="close1"> <i class="fa fa-times" aria-hidden="true"></i></div>
+				
+				<div class="close1"> <i class="fa fa-shopping-cart" aria-hidden="true"></i></div>
 			 </td>
 			<td class="t-data"><?php
                         $qn=$r14[8];
