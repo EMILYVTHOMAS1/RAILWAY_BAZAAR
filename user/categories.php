@@ -201,9 +201,10 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
        {
            
          ?>
+            
 		<div class="col-md-4 kic-top1">
                     <a href="categories.php?a=<?php  echo $r22[2]; ?>&e=<?php echo $station ?>">
-                            <img  style="width: 100%;height: 220px" src="../shop_logo/<?php echo $r22[3]?>" class="img-responsive" alt="">
+                        <img  style="width: 100%;height: 220px" src="../admin/shop_logo/<?php echo $r22[3]?>" class="img-responsive" alt="">
 			</a>
 			<h6><?php  echo $r22[2]; ?></h6>
 			<p>Nam libero tempore</p>
@@ -213,8 +214,10 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
        }
    }
        ?>
+            <br/>
          <br/> 
          <br/><br/>
+        </div>
          <div class="kic ">
 			<h3>Popular Categories</h3>
 			
@@ -272,19 +275,16 @@ if (mysqli_num_rows($sel35)>0)
 
     $r26=  mysqli_fetch_row($sel35);
                     ?>
-                
+                <br/>
 		<div class="product">
 		<div class="container">
 			<div class="spec ">
-				<h3>Products</h3>
-				<div class="ser-t">
-					<b></b>
-					<span><i></i></span>
-					<b class="line"></b>
-				</div>
+                            <br/>
+				
+				
 			</div>
 				<div class=" con-w3l agileinf">
-                                    
+                                    <br/>
                                     <?php
                     while ($r3=  mysqli_fetch_row($sel8))
                     {
@@ -292,7 +292,7 @@ if (mysqli_num_rows($sel35)>0)
                                     
 							<div class="col-md-3 pro-1">
 								<div class="col-m">
-								<a href="../temp/#" data-toggle="modal" data-target="#myModal1" class="offer-img">
+								<a href="#">
                                                                     <img style="width: 100%;height: 250px" src="../product/<?php echo $r3[2] ?>" class="img-responsive" alt="">
 									</a>
 									<div class="mid-1">
@@ -320,6 +320,7 @@ if (mysqli_num_rows($sel35)>0)
 						 </div>
 		</div>
 	</div>
+
 <?php
                 
 }
@@ -327,74 +328,8 @@ if (mysqli_num_rows($sel35)>0)
                 }
                 ?>
 <!--footer-->
-<div class="footer">
-	<div class="container">
-		<div class="col-md-3 footer-grid">
-			<h3>About Us</h3>
-			<p>Nam libero tempore, cum soluta nobis est eligendi 
-				optio cumque nihil impedit quo minus id quod maxime 
-				placeat facere possimus.</p>
-		</div>
-		<div class="col-md-3 footer-grid ">
-			<h3>Menu</h3>
-			<ul>
-				<li><a href="../temp/index.html">Home</a></li>
-				<li><a href="../temp/kitchen.html">Kitchen</a></li>
-				<li><a href="../temp/care.html">Personal Care</a></li>
-				<li><a href="../temp/hold.html">Household</a></li>						 
-				<li><a href="../temp/codes.html">Short Codes</a></li> 
-				<li><a href="../temp/contact.html">Contact</a></li>
-			</ul>
-		</div>
-		<div class="col-md-3 footer-grid ">
-			<h3>Customer Services</h3>
-			<ul>
-				<li><a href="../temp/shipping.html">Shipping</a></li>
-				<li><a href="../temp/terms.html">Terms & Conditions</a></li>
-				<li><a href="../temp/faqs.html">Faqs</a></li>
-				<li><a href="../temp/contact.html">Contact</a></li>
-				<li><a href="../temp/offer.html">Online Shopping</a></li>						 
-				 
-			</ul>
-		</div>
-		<div class="col-md-3 footer-grid">
-			<h3>My Account</h3>
-			<ul>
-				<li><a href="../temp/login.html">Login</a></li>
-				<li><a href="../temp/register.html">Register</a></li>
-				<li><a href="../temp/wishlist.html">Wishlist</a></li>
-				
-			</ul>
-		</div>
-		<div class="clearfix"></div>
-			<div class="footer-bottom">
-				<h2><a href="../temp/index.html"><b>T<br>H<br>E</b>Big Store<span>The Best Supermarket</span></a></h2>
-				<p class="fo-para">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
-				<ul class="social-fo">
-					<li><a href="../temp/#" class=" face"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-					<li><a href="../temp/#" class=" twi"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-					<li><a href="../temp/#" class=" pin"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
-					<li><a href="../temp/#" class=" dri"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
-				</ul>
-				<div class=" address">
-					<div class="col-md-4 fo-grid1">
-							<p><i class="fa fa-home" aria-hidden="true"></i>12K Street , 45 Building Road Canada.</p>
-					</div>
-					<div class="col-md-4 fo-grid1">
-							<p><i class="fa fa-phone" aria-hidden="true"></i>+1234 758 839 , +1273 748 730</p>	
-					</div>
-					<div class="col-md-4 fo-grid1">
-						<p><a href="../temp/mailto:info@example.com"><i class="fa fa-envelope-o" aria-hidden="true"></i>info@example1.com</a></p>
-					</div>
-					<div class="clearfix"></div>
-					
-					</div>
-			</div>
-		<div class="copy-right">
-			<p> &copy; 2016 Big store. All Rights Reserved | Design by  <a href="../temp/http://w3layouts.com/"> W3layouts</a></p>
-		</div>
-	</div>
 </div>
+
 <!-- //footer-->
 
 <!-- smooth scrolling -->
