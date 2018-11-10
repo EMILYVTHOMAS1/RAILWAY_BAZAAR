@@ -39,8 +39,9 @@
                                                     <li ><a href="wishlist.php" class="hyper "><span>Wishlist</span></a></li>	
 							
                                                     <li ><a href="hist.php" class="hyper "><span>Track Purchase</span></a></li>	
-							
-							
+                                                    <li ><a href="cm_port.php" class="hyper "><span>Post Complaint</span></a></li>	
+						
+                                                    <li ><a href="feed.php" class="hyper "><span>Post Feedback</span></a></li>	
 							
                                                         <li><a href="logout.php" class="hyper"> <span>Logout</span></a></li>
 						</ul>
@@ -59,8 +60,8 @@
                                              <a href="#"  data-toggle="modal" data-target="#basicModal"><span style="color: green;font-size: larger" class="fa fa-shopping-cart"><span class="badge badge-notify">
                                                 <?php
                                                                     
-    $sel20=  mysql_query("select * from cart1 where nme='$user_name' and st='6'");
-                     $se_nu=  mysql_num_rows($sel20);
+    $sel20=  mysqli_query($con,"select * from cart1 where nme='$user_name' and st='6'");
+                     $se_nu=  mysqli_num_rows($sel20);
                      echo "$se_nu";
                                                                     
                                                                     ?>
@@ -87,7 +88,7 @@
 <?php
 if(isset($_GET['del_cart']))
 {
-    $delc=mysql_query("delete from cart1 where id='".$_GET['del_cart']."'");
+    $delc=mysqli_query($con,"delete from cart1 where id='".$_GET['del_cart']."'");
     //echo mysql_error();
     if($delc>0)
     {
@@ -112,8 +113,8 @@ if(isset($_GET['del_cart']))
         <div class="modal-body">
             
             <?php
-    $sel20=  mysql_query("select * from cart1 where nme='$user_name' and st='6'");
-    if(mysql_num_rows($sel20)>0)
+    $sel20=  mysqli_query($con,"select * from cart1 where nme='$user_name' and st='6'");
+    if(mysqli_num_rows($sel20)>0)
     {
         ?>
             
@@ -132,11 +133,11 @@ if(isset($_GET['del_cart']))
                 <tbody>
                     <?php
     $i=0;
-        while ($r14=  mysql_fetch_row($sel20))
+        while ($r14=  mysqli_fetch_row($sel20))
                 
         {
-            $pro= mysql_query("select * from add_product where product='$r14[2]' and name='$r14[5]'");
-            $pro1= mysql_fetch_row($pro);
+            $pro= mysqli_query($con,"select * from add_product where product='$r14[2]' and name='$r14[5]'");
+            $pro1= mysqli_fetch_row($pro);
             $i++;
             ?>
                     <tr>
