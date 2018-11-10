@@ -32,27 +32,27 @@ $unme=$_POST['unme'];
 $p=$_POST['p'];
 $nupdp=$unme."".substr($updp,strrpos($updp,"."));
 move_uploaded_file($_FILES['updp']['tmp_name'],getcwd()."\\user_dp\\$nupdp");
-$sel24=  mysql_query("select * from bank where acnt='$ac_no'");
-if(mysql_num_rows($sel24)>0)
+$sel24=  mysqli_query($con,"select * from bank where acnt='$ac_no'");
+if(mysqli_num_rows($sel24)>0)
 {
-    $r=mysql_fetch_row($sel24);
+    $r=mysqli_fetch_row($sel24);
     $mobno=$_POST['mobno'];
      $item="$mobno";
             
   
-    $ins=mysql_query("insert into user_reg values('','$nme','$addr','$mobno','$adhr_no','$ac_no','$em','$gender','$dob','$selloc','$nupdp','$unme','$p','user','0','$dist')");
-echo mysql_error();
+    $ins=mysqli_query($con,"insert into user_reg values('','$nme','$addr','$mobno','$adhr_no','$ac_no','$em','$gender','$dob','$selloc','$nupdp','$unme','$p','user','0','$dist')");
+echo mysqli_error();
     if ($ins>0)
-{
+    {
     
     header("location:usr.php?suss=1");
-}
+    }
     
 }
 
 }
  else {
-    mysql_error(); 
+    echo mysqli_error($con); 
 }
 
 
@@ -68,7 +68,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE html>
 <html>
 <head>
-<title>Freight Shipping Form Flat Responsive Widget Template :: w3layouts</title>
+<title></title>
 <!-- Meta tag Keywords -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -84,6 +84,70 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- web-fonts -->
 
 <!-- //web-fonts --> 
+<script type="text/javascript">
+    
+    
+    function chkc(b2)
+{
+var k5=b2.length;
+var ch2=/([0-9])$/;
+if(ch2.test(b2)==false)
+{
+document.getElementById("o3").innerHTML="<font color='red'>*Only Numbers*</font>";
+$("#btn").hide();
+return false;
+}
+else if(k5!=10)
+{
+document.getElementById("o3").innerHTML="<font color='red'>*Please Check Your Mobile Number*</font>";
+$("#btn").hide();
+return false;
+}
+else
+{
+  document.getElementById("o3").innerHTML="";  
+  $("#btn").show();
+}
+}
+  
+ function chkp(c)
+{
+var s=document.getElementById("p10").value;
+
+if(s==c)
+{
+document.getElementById("p").innerHTML="<font color='Green'>*Password is Correct*</font>";
+$("#btn").show();
+return false;
+}
+else
+{
+document.getElementById("p").innerHTML="<font color='red'>*Verfy Password*</font>";
+$("#btn").hide();
+}
+}
+
+
+
+
+
+function validateemail(a)  
+     {  
+          //var a = document.myform.email.value;  
+          var atposition = a.indexOf("@");  
+          var dotposition = a.lastIndexOf(".");  
+          if (atposition<1 || dotposition<atposition+2 || dotposition+2>=a.length) 
+          {  
+               document.getElementById("em").innerHTML="<font color='red'>*Please Check Your Email Address*</font>";
+                $("#btn").hide();  
+          }  
+          else
+{
+                document.getElementById("em").innerHTML="";  
+  $("#btn").show();
+}
+     }  
+    </script>
 </head>
 <body>
 	<!-- banner --> 
@@ -91,7 +155,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 	<div class="center-container">
 	    <div class="w3ls-agileinfo">
 		
-          <h1> Freight Shipping Form </h1>	
+          <h1> RAILWAY BAZAAR </h1>	
 		  </div>
 		 <div class="bg-agile">
 		 <div class="top-icons-agileits-w3layouts">
@@ -107,23 +171,22 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 				<li>Shop</li>
 			 </ul>
 		 </div>
-			<h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </h2>
-			<h3>Order Contact</h3>
+                     <br>
+			<h3>User Registration</h3>
 			<div class="login-form">			
 							<form method="post" enctype="multipart/form-data" name="myForm" onsubmit="return validateForm()">
                                                             <input type="text" name="nme"placeholder="Full Name" id="name1" class="form-control"onblur="chka(this.value)" /><span id="n3" />
                                                             <textarea placeholder="Address" name="addr" id="addr" class="form-control"></textarea>
                                                             <input type="number"placeholder="Contact" name="mobno" class="form-control"onblur="chkc(this.value)" /><span id="o3"></span>
-                                                            <input type="text"  name="Number" placeholder="Phone number" required="" />
-								
+                                                           
                                                             <input placeholder="Email" type="email" name="em" id="em" class="form-control"/>
                                                             <input type="radio" name="gender" id="gender" value="female"><span style="color: white">Female</span> <input type="radio" name="gender"  id="gender" value="male"><span style="color: white">Male</span> 
 								<input type="date" name="dob" id="dob" class="form-control"/>
                                                             <select name="stat" id="stat" class="form-control"  onchange="loaddistrict(this.value);loadst_hos(this.value)">
                                         <option value="">Choose State</option>
                                         <?php
-                                        $sel_state=mysql_query("select * from state");
-                                        while($r_state=mysql_fetch_row($sel_state))
+                                        $sel_state=mysqli_query($con,"select * from state");
+                                        while($r_state=mysqli_fetch_row($sel_state))
                                         {
                                             ?>
                                         <option value="<?php echo $r_state[0] ?>"><?php echo $r_state[1] ?></option>
