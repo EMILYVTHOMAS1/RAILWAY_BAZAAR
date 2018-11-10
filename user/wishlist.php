@@ -216,7 +216,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 				<h5><?php echo $r14[2] ?></h5>
 			</div>
 				<div class="clearfix"> </div>
-				<div class="close1"> <i class="fa fa-times" aria-hidden="true"></i></div>
+                                <div class="close1"> <a href="wishlist.php?del_cart=<?php echo$r14[0]  ?>"><i class="fa fa-times" aria-hidden="true"></a></i></div>
 			 </td>
 			<td class="t-data"><?php
                         $qn=$r14[8];
