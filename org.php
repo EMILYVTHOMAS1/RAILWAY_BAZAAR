@@ -13,7 +13,7 @@ if(isset($_POST['shop']))
     $shopp=$_POST['shopp'];
     $shopuid=$_POST['shopuid'];
     $ac=$_POST['ac'];
-    $sel4=  mysqli_query($$con,"select * from shop_reg");
+    $sel4=  mysqli_query($con,"select * from shop_reg");
     $count=  mysqli_num_rows($sel4);
     $count1=$count+1;
 $npic=$count1."".substr($shop_pic,strrpos($shop_pic,"."));
@@ -155,7 +155,7 @@ function validateemail(a)
 			<div class="login-form">			
 							<form method="post" enctype="multipart/form-data" name="myForm" onsubmit="return validateForm()">
                                                             <input placeholder="Shop Number" type="text" name="shop_num" required="required" />
-                                                            <input type="text"placeholder="Shop Number" name="shop_nme" required="required" />
+                                                            <input type="text"placeholder="Shop Name" name="shop_nme" required="required" />
                                                             <input type="text"Placeholder="Ownership Name" name="shop_owner" required="required"/>
                                                             
                                                             <select name="shop_cat" class="form-control" required="required"> 
