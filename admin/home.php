@@ -8,8 +8,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 include("../connection.php");
 session_start();
 $user_name=$_SESSION['admin'];
- if(!isset($_SESSION['admin']))
+ if($user_name=$_SESSION['admin'])
  {
+     
+ }
+ else {
 header("location:index.php");     
 }
 if(isset($_POST['addcat']))
@@ -20,7 +23,7 @@ if(isset($_POST['addcat']))
             $nup=$type."".substr($up,strrpos($up,"."));
 move_uploaded_file($_FILES['up']['tmp_name'],getcwd()."\\shop_logo\\$nup");
            
-             $ins1=mysql_query("insert into add_cat values('','$num','$type','$nup')");
+             $ins1=mysqli_query($con,"insert into add_cat values('','$num','$type','$nup')");
              
 }
 ?>
@@ -142,9 +145,9 @@ include 'menu.php';
                     <i class="pull-left fa fa-dollar icon-rounded"></i>
                     <div class="stats">
                       <h5><strong><?php
-                      $su=mysql_query("select sum(price) from cart1 where st='1'");
+                      $su=mysqli_query($con,"select sum(price) from cart1 where st='1'");
                       
-                              $su1=mysql_fetch_row($su);
+                              $su1=mysqli_fetch_row($su);
                               echo"$su1[0]";
                       
                       ?> Rs/-</strong></h5>
@@ -157,8 +160,8 @@ include 'menu.php';
                     <i class="pull-left fa fa-laptop user1 icon-rounded"></i>
                     <div class="stats">
                       <h5><strong><?php
-                      $sh1=  mysql_query("select * from shop_reg");
-                      $sh1a= mysql_num_rows($sh1);
+                      $sh1=  mysqli_query($con,"select * from shop_reg");
+                      $sh1a= mysqli_num_rows($sh1);
                       echo "$sh1a";
                       ?></strong></h5>
                       <span>Online Services</span>
@@ -170,8 +173,8 @@ include 'menu.php';
                     <i class="pull-left fa fa-user user2 icon-rounded"></i>
                     <div class="stats">
                       <h5><strong><?php
-                      $sh2=  mysql_query("select * from user_reg");
-                      $sh2a= mysql_num_rows($sh2);
+                      $sh2=  mysqli_query($con,"select * from user_reg");
+                      $sh2a= mysqli_num_rows($sh2);
                       echo "$sh2a";
                       ?></strong></h5>
                       <span>Users</span>
@@ -183,8 +186,8 @@ include 'menu.php';
                     <i class="pull-left fa fa-product-hunt dollar1 icon-rounded"></i>
                     <div class="stats">
                       <h5><strong></strong><?php
-                      $sh3=  mysql_query("select * from add_product");
-                      $sh3a= mysql_num_rows($sh3);
+                      $sh3=  mysqli_query($con,"select * from add_product");
+                      $sh3a= mysqli_num_rows($sh3);
                       echo "$sh3a";
                       ?></h5>
                       <span>Product</span>
@@ -196,8 +199,8 @@ include 'menu.php';
                     <i class="pull-left fa fa-train dollar2 icon-rounded"></i>
                     <div class="stats">
                       <h5><strong><?php
-                      $sh4=  mysql_query("select * from train_mangmt");
-                      $sh4a= mysql_num_rows($sh4);
+                      $sh4=  mysqli_query($con,"select * from train_mangmt");
+                      $sh4a= mysqli_num_rows($sh4);
                       echo "$sh4a";
                       ?></strong></h5>
                       <span>Station</span>
@@ -271,7 +274,7 @@ include 'menu.php';
 		</div>
 	<!--footer-->
 	<div class="footer">
-	   <p>&copy; 2018 Glance Design Dashboard. All Rights Reserved | Design by <a href="https://w3layouts.com/" target="_blank">w3layouts</a></p>		
+	   <p></p>		
 	</div>
     <!--//footer-->
 	</div>
