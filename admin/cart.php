@@ -20,7 +20,7 @@ if(isset($_GET['a']))
            setTimeout(function(){
                 win.close()
             }, 6000);</script>";
-    $up=  mysql_query("update shop_reg set status='1' where shop_num='$a'");
+    $up=  mysqli_query($con,"update shop_reg set status='1' where shop_num='$a'");
 }
 if(isset($_GET['b']))
 {
@@ -32,7 +32,7 @@ if(isset($_GET['b']))
            setTimeout(function(){
                 win.close()
             }, 6000);</script>";
-    $up=  mysql_query("update shop_reg set status='2' where shop_num='$b'");
+    $up=  mysqli_query($con,"update shop_reg set status='2' where shop_num='$b'");
 }
 ?>
 
@@ -98,8 +98,8 @@ include 'menu.php';
                                             <div class="panel-body widget-shadow">
 						<h4>Basic Table:</h4>
                                                 <?php
-    $sel20=  mysql_query("select * from cart1");
-    if(mysql_num_rows($sel20)>0)
+    $sel20=  mysqli_query($con,"select * from cart1");
+    if(mysqli_num_rows($sel20)>0)
     {
         ?>
 						<table class="table">
@@ -123,7 +123,7 @@ include 'menu.php';
 							<tbody>
                                                              <?php
     $i=0;
-        while ($r14=  mysql_fetch_row($sel20))
+        while ($r14=  mysqli_fetch_row($sel20))
                 
         {
             $i++;
@@ -169,7 +169,7 @@ include 'menu.php';
 		</div>
 		<!--footer-->
 		<div class="footer">
-		   <p>&copy; 2018 Glance Design Dashboard. All Rights Reserved | Design by <a href="https://w3layouts.com/" target="_blank">w3layouts</a></p>
+		   <p></p>
 	   </div>
         <!--//footer-->
 	</div>
