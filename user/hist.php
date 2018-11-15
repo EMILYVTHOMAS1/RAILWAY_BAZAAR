@@ -302,9 +302,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 	<div class="container">
 		<div class="col-md-3 footer-grid">
 			<h3>About Us</h3>
-			<p>Nam libero tempore, cum soluta nobis est eligendi 
-				optio cumque nihil impedit quo minus id quod maxime 
-				placeat facere possimus.</p>
+			<p>Railway Bazaar is an online shopping site that can be used for shopping while traveling on the train. It is exclusively created for the passengers who travel through train.</p>
 		</div>
 		<div class="col-md-3 footer-grid ">
 			<h3>Menu</h3>
@@ -362,7 +360,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 					</div>
 			</div>
 		<div class="copy-right">
-			<p> &copy; 2016 Big store. All Rights Reserved | Design by  <a href="../temp/http://w3layouts.com/"> W3layouts</a></p>
+			<p> </p>
 		</div>
 	</div>
 </div>
