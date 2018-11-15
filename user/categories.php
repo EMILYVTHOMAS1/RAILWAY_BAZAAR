@@ -207,7 +207,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
                         <img  style="width: 100%;height: 220px" src="../admin/shop_logo/<?php echo $r22[3]?>" class="img-responsive" alt="">
 			</a>
 			<h6><?php  echo $r22[2]; ?></h6>
-			<p>Nam libero tempore</p>
+			<p></p>
 		</div>
             
 		<?php
@@ -248,7 +248,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
                             <img  class="img img-responsive img-rounded img-thumbnail" style="width: 100%;height: 170px;border-color: yellow" src="../shop/<?php  echo $r23[6]; ?>" class="img-responsive" alt="">
 			</a>
 			<h6><?php echo $r23[2] ?></h6>
-			<p>Nam libero tempore</p>
+			<p></p>
 		</div>
         
       
