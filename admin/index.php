@@ -11,8 +11,8 @@ if(isset($_POST['sub']))
 $t1=$_POST['t1'];
 $t2=$_POST['t2'];
 
-$log=mysql_query("select * from user_reg where user_id='$t1' and user_pass='$t2' and user_type='admin'");
-if(mysql_num_rows($log)>0)
+$log=mysqli_query($con,"select * from user_reg where user_id='$t1' and user_pass='$t2' and user_type='admin'");
+if(mysqli_num_rows($log)>0)
 {
     
     $_SESSION['admin']=$t1;
@@ -22,7 +22,7 @@ if(mysql_num_rows($log)>0)
 }
 else
 {
-    header("location:index.php?f=1");
+    header("location:index.php?Fail=1");
 }
     
 
@@ -69,7 +69,7 @@ else
 	</div>
 	<!-- //bg effect -->
 	<!-- title -->
-	<h1>Effect Login Form</h1>
+	<h1>Indian Railway </h1>
 	<!-- //title -->
 	<!-- content -->
 	<div class="sub-main-w3">
@@ -100,32 +100,20 @@ else
 							<span>Stay Signed In</span>
 						</label>
 					</li>
-					
+					<li>
+						<a href="temp/#">Forgot Password?</a>
+					</li>
 				</ul>
 			</div>
 			<!-- //checkbox -->
-                        <input type="submit" value="Log In"name="sub"><br>
-                        
-                        <?php
-                        if(isset($_GET['f']))
-                        {
-                          echo"invalid user";
-                           
-                        }
-                        
-                        
-                        
-                        ?>
-                        
-                        
+			<input type="submit" value="Log In"name="sub">
 		</form>
 	</div>
 	<!-- //content -->
 
 	<!-- copyright -->
 	<div class="footer">
-		<p>&copy; 2018 Effect Login Form. All rights reserved | Design by
-			<a href="temp/http://w3layouts.com">W3layouts</a>
+		<p>
 		</p>
 	</div>
 	<!-- //copyright -->
