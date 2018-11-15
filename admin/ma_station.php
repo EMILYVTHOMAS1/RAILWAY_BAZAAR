@@ -19,14 +19,14 @@ header("location:index.php");
   $stname=$_POST['stname'];
   $stcd=$_POST['stcd'];
      
-      $ins7=  mysql_query("insert into train_mangmt values('','$stid','$state','$dis','$stname','$stcd')");
+      $ins7=  mysqli_query($con,"insert into train_mangmt values('','$stid','$state','$dis','$stname','$stcd')");
       
 }
 ?>
 <?php
 if(isset($_GET['del']))
 {
-    $del1=mysql_query("delete from train_mangmt where id='".$_GET['del']."'");
+    $del1=mysqli_query($con,"delete from train_mangmt where id='".$_GET['del']."'");
     //echo mysql_error();
     if($del1>0)
     {
@@ -40,7 +40,7 @@ if(isset($_GET['del']))
 <?php
 if(isset($_GET['del']))
 {
-    $del1=mysql_query("delete from add_cat where id='".$_GET['del']."'");
+    $del1=mysqli_query($con,"delete from add_cat where id='".$_GET['del']."'");
     //echo mysql_error();
     if($del1>0)
     {
@@ -117,8 +117,8 @@ include 'menu.php';
                                                            <select name="stat" id="stat" class="form-control" required="required" onchange="loaddistrict(this.value);loadst_hos(this.value)">
                                         <option value="">Choose State</option>
                                         <?php
-                                        $sel_state=mysql_query("select * from state");
-                                        while($r_state=mysql_fetch_row($sel_state))
+                                        $sel_state=mysqli_query($con,"select * from state");
+                                        while($r_state=mysqli_fetch_row($sel_state))
                                         {
                                             ?>
                                         <option value="<?php echo $r_state[0] ?>"><?php echo $r_state[1] ?></option>
@@ -142,7 +142,7 @@ include 'menu.php';
                                }
                                
                             </script>
-                            <div class="form-group"> <label for="exampleInputPassword1">District</label> 
+                            <div class="form-group"> <label for="exampleInputPassword1">State</label> 
                             <span id="dis">
                                         <select name="dist" class="form-control" required="required">
                                         <option value="">Choose District</option>
@@ -155,7 +155,7 @@ include 'menu.php';
                             
                             <div class="form-group"> <label for="exampleInputEmail1">Station Code</label> <input type="text" name="stcd" id="stcd" class="form-control" id="exampleInputEmail1" placeholder="Id..."> </div>
                             
-                            
+                            <div class="checkbox"> <label> <input type="checkbox"> Check me out </label> </div> 
                                                             <input type="submit" value="Add Now"name="mngTrain" class="btn btn-success"> </form> 
 						</div>
 					</div>
@@ -166,8 +166,8 @@ include 'menu.php';
                                             <div class="panel-body widget-shadow">
 						<h4>Basic Table:</h4>
                                                 <?php 
-    $sel11=  mysql_query("select * from train_mangmt");
-    if (mysql_num_rows($sel11)>0)
+    $sel11=  mysqli_query($con,"select * from train_mangmt");
+    if (mysqli_num_rows($sel11)>0)
     {
            ?>
 						<table class="table">
@@ -187,7 +187,7 @@ include 'menu.php';
 							<tbody>
                                                             <?php
     $i=0;
-        while($r6=  mysql_fetch_row($sel11))
+        while($r6=  mysqli_fetch_row($sel11))
         {
             $i++;
            ?>
@@ -196,19 +196,19 @@ include 'menu.php';
             <td><?php echo $i ?></td>
              <td><?php echo $r6[1] ?></td>
               <td><?php 
-              $sel41=  mysql_query("select * from state where StCode='$r6[2]'");
-              if(mysql_num_rows($sel41)>0)
+              $sel41=  mysqli_query($con,"select * from state where StCode='$r6[2]'");
+              if(mysqli_num_rows($sel41)>0)
               {
-                  $r30=  mysql_fetch_row($sel41);
+                  $r30=  mysqli_fetch_row($sel41);
                   echo $r30[1];
               }
               
               ?></td>
                <td><?php 
-              $sel42=  mysql_query("select * from district where DistCode='$r6[3]'");
-              if(mysql_num_rows($sel42)>0)
+              $sel42=  mysqli_query($con,"select * from district where DistCode='$r6[3]'");
+              if(mysqli_num_rows($sel42)>0)
               {
-                  $r30=  mysql_fetch_row($sel42);
+                  $r30=  mysqli_fetch_row($sel42);
                   echo $r30[2];
               }
               ?></td>
@@ -237,7 +237,7 @@ include 'menu.php';
 		</div>
 		<!--footer-->
 		<div class="footer">
-		   <p>&copy; 2018 Glance Design Dashboard. All Rights Reserved | Design by <a href="https://w3layouts.com/" target="_blank">w3layouts</a></p>
+		   <p></p>
 	   </div>
         <!--//footer-->
 	</div>
