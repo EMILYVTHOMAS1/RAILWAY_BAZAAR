@@ -78,7 +78,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE html>
 <html>
 <head>
-<title>Freight Shipping Form Flat Responsive Widget Template :: w3layouts</title>
+<title>Railway Bazaar</title>
 <!-- Meta tag Keywords -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -156,7 +156,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 	<!-- //banner --> 
 	 <!--copyright-->
 		<div class="copy w3ls">
-		    <p>&copy; 2017. Freight Shipping Form . All Rights Reserved  | Design by <a href="lo_temp/http://w3layouts.com/" target="_blank">W3layouts</a> </p>
+		    <p></p>
 	    </div>
 	<!--//copyright-->
 	</div>	
