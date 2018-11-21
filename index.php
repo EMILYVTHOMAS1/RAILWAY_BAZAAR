@@ -5,10 +5,10 @@ if(isset($_POST['b1']))
     
    $user_name=$_POST['u'];
    $p=$_POST['p'];
-   $sel1=mysql_query("select * from user_reg where user_id='$user_name' and user_pass='$p'");
-   if(mysql_num_rows($sel1)>0)
+   $sel1=mysqli_query($con,"select * from user_reg where user_id='$user_name' and user_pass='$p'");
+   if(mysqli_num_rows($sel1)>0)
 {
-    $r=mysql_fetch_row($sel1);
+    $r=mysqli_fetch_row($sel1);
     
 
     session_start();
@@ -45,11 +45,11 @@ if(isset($_POST['b1']))
  else {
     header("location:index.php?fail=1");
 }
-$sel6=mysql_query("select * from shop_reg where user_id='$user_name' and passwd='$p'");
-if(mysql_num_rows($sel6)>0)
+$sel6=mysqli_query($con,"select * from shop_reg where user_id='$user_name' and passwd='$p'");
+if(mysqli_num_rows($sel6)>0)
 {
     session_start();
-      $r1=mysql_fetch_row($sel6); 
+      $r1=mysqli_fetch_row($sel6); 
     if($r1[10]=="shop_admin")
     {
         
