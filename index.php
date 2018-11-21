@@ -5,10 +5,10 @@ if(isset($_POST['b1']))
     
    $user_name=$_POST['u'];
    $p=$_POST['p'];
-   $sel1=mysqli_query($con,"select * from user_reg where user_id='$user_name' and user_pass='$p'");
-   if(mysqli_num_rows($sel1)>0)
+   $sel1=mysql_query("select * from user_reg where user_id='$user_name' and user_pass='$p'");
+   if(mysql_num_rows($sel1)>0)
 {
-    $r=mysqli_fetch_row($sel1);
+    $r=mysql_fetch_row($sel1);
     
 
     session_start();
@@ -26,6 +26,11 @@ if(isset($_POST['b1']))
         $_SESSION['user']=$user_name;
         header("location:user/home.php");
     }
+     if($r[14]=="2")
+        {
+       
+        header("location:index.php?den=1");
+    }
      if($r[14]=="0")
         {
         
@@ -38,13 +43,13 @@ if(isset($_POST['b1']))
     }
 }
  else {
-   header("location:index.php?fail=1"); 
+    header("location:index.php?fail=1");
 }
-$sel6=mysqli_query($con,"select * from shop_reg where user_id='$user_name' and passwd='$p'");
-if(mysqli_num_rows($sel6)>0)
+$sel6=mysql_query("select * from shop_reg where user_id='$user_name' and passwd='$p'");
+if(mysql_num_rows($sel6)>0)
 {
     session_start();
-      $r1=mysqli_fetch_row($sel6); 
+      $r1=mysql_fetch_row($sel6); 
     if($r1[10]=="shop_admin")
     {
         
@@ -73,7 +78,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE html>
 <html>
 <head>
-<title>Railway Bazaar</title>
+<title>Freight Shipping Form Flat Responsive Widget Template :: w3layouts</title>
 <!-- Meta tag Keywords -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -114,26 +119,36 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 			 </ul>
 		 </div>
 			<h2>Login to your account if you are already Registered. </h2>
-                        
-                        <h3>Login Form</h3>
+			<h3>Login Form</h3>
+                         <?php
+                                            if(isset($_GET['den']))
+                                            {
+                                            
+                                            ?>
+                            <center>
+                                            <h4 style="color: red">Access Denied</h4>
+                            </center>
+                                                <?php
+                                            }
+                                            ?>
                         <?php
-                        if(isset($_GET['fail']))
-                        
-                        {
-                        ?>
-                        <h4><span style="color: red">Incorrect Username/Password </span></h4>
-                        <?php
-                        }
-                        ?>
+                                            if(isset($_GET['fail']))
+                                            {
+                                            
+                                            ?>
+                            <center>
+                                            <h4 style="color: red">Incorrect Username/Password</h4>
+                            </center>
+                                                <?php
+                                            }
+                                            ?>
 			<div class="login-form">			
 							<form  method="post">
 								<input type="text"  name="u" placeholder="Username" required="" />
 								<input type="password" class="form-control"  name="p" placeholder="Password" required="" />
 								
-                                                                <a href="pass.php"><span style="float: right">Forget Password?</span></a>
-								
+                                                                <a href="pass.php"><span style="float: right;color: blue">Forget Password?</span></a>
 								<input type="submit"name="b1" value="Submit">
-                                                                
 							</form>	
 						</div>	
 		</div>
@@ -141,7 +156,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 	<!-- //banner --> 
 	 <!--copyright-->
 		<div class="copy w3ls">
-		    <p>> </p>
+		    <p>&copy; 2017. Freight Shipping Form . All Rights Reserved  | Design by <a href="lo_temp/http://w3layouts.com/" target="_blank">W3layouts</a> </p>
 	    </div>
 	<!--//copyright-->
 	</div>	
