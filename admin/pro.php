@@ -45,7 +45,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Glance Design Dashboard an Admin Panel Category Flat Bootstrap Responsive Website Template | Forms :: w3layouts</title>
+<title>Railway Bazaar</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="Glance Design Dashboard Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
@@ -12974,7 +12974,8 @@ include 'menu.php';
 <div class="filler"></div>
 <div class="filler"></div>
 <div class="filler"></div>
-</div><div class="portfolio_paging"><span rel="2" class="load_more"><a href="http://demo.qodeinteractive.com/bridge/portfolio/with-text/three-columns-grid/page/2/">Show more</a></span></div><div class="portfolio_paging_loading"><a href="javascript: void(0)" class="qbutton">Loading...</a></div></div><div class="separator  transparent center  " style="margin-top: 20px;margin-bottom: 20px;"></div>
+</div>
+                            <!--<div class="portfolio_paging"><span rel="2" class="load_more"><a href="#"></a></span></div><div class="portfolio_paging_loading"><a href="javascript: void(0)" class="qbutton">Loading...</a></div></div><div style="margin-top: 20px;margin-bottom: 20px;"></div>-->
 
 		</div> 
 	</div> 
@@ -12994,7 +12995,7 @@ include 'menu.php';
 		</div>
 		<!--footer-->
 		<div class="footer">
-		   <p>&copy; 2018 Glance Design Dashboard. All Rights Reserved | Design by <a href="https://w3layouts.com/" target="_blank">w3layouts</a></p>
+		   <p></p>
 	   </div>
         <!--//footer-->
 	</div>
