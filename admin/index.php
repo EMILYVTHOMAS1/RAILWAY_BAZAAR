@@ -114,7 +114,7 @@ else
 						</label>
 					</li>
 					<li>
-						<a href="temp/#">Forgot Password?</a>
+						<a href="temp/#"></a>
 					</li>
 				</ul>
 			</div>
