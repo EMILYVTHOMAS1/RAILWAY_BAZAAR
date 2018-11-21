@@ -30,7 +30,7 @@ move_uploaded_file($_FILES['up']['tmp_name'],getcwd()."\\shop_logo\\$nup");
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Glance Design Dashboard an Admin Panel Category Flat Bootstrap Responsive Website Template | Home :: w3layouts</title>
+<title>Railway Bazaar</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="Glance Design Dashboard Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
@@ -274,7 +274,7 @@ include 'menu.php';
 		</div>
 	<!--footer-->
 	<div class="footer">
-	   <p>&copy; 2018 Glance Design Dashboard. All Rights Reserved | Design by <a href="https://w3layouts.com/" target="_blank">w3layouts</a></p>		
+	   <p></p>		
 	</div>
     <!--//footer-->
 	</div>
