@@ -178,8 +178,8 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 		</div>
 		<div class="clearfix"></div>
 			<div class="footer-bottom">
-				<h2 ><a href="../temp/index.html"><b>T<br>H<br>E</b>Railway Bazaar<span>The Best Supermarket</span></a></h2>
-				<p class="fo-para">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
+				<h2 ><a href="#"><b>T<br>H<br>E</b>Railway Bazaar<span>The Best Supermarket</span></a></h2>
+				<p class="fo-para"></p>
 				<ul class="social-fo">
 					<li><a href="../temp/#" class=" face"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
 					<li><a href="../temp/#" class=" twi"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
