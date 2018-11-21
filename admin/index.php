@@ -32,7 +32,7 @@ else
 <html lang="zxx">
 
 <head>
-	<title>Effect Login Form Responsive Widget Template :: w3layouts</title>
+	<title>Railway Bazaar</title>
 	<!-- Meta tag Keywords -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="UTF-8" />
@@ -74,9 +74,11 @@ else
 	<!-- content -->
 	<div class="sub-main-w3">
 		<form method="post">
+                    
 			<h2>Login Now
 				<i class="fas fa-level-down-alt"></i>
 			</h2>
+                    
 			<div class="form-style-agile">
 				<label>
 					<i class="fas fa-user"></i>
@@ -84,6 +86,17 @@ else
 				</label>
 				<input placeholder="Username" name="t1" type="text" required="">
 			</div>
+                    <?php
+                                            if(isset($_GET['Fail']))
+                                            {
+                                            
+                                            ?>
+                            <center>
+                                            <h4 style="color: red">Incorrect Username/Password</h4>
+                            </center>
+                                                <?php
+                                            }
+                                            ?>
 			<div class="form-style-agile">
 				<label>
 					<i class="fas fa-unlock-alt"></i>
@@ -113,7 +126,8 @@ else
 
 	<!-- copyright -->
 	<div class="footer">
-		<p>
+		<p>&copy; 2018 Effect Login Form. All rights reserved | Design by
+			<a href="temp/http://w3layouts.com">W3layouts</a>
 		</p>
 	</div>
 	<!-- //copyright -->
