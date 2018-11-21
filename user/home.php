@@ -103,8 +103,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 <div data-vide-bg="../temp/video/video">
     <div class="container">
 		<div class="banner-info">
-			<h3>It is a long established fact that a reader will be distracted by 
-			the readable </h3>	
+			<h3>A new online shopping experience</h3>	
 			<div class="search-form">
                             
 				<form method="post">
@@ -677,12 +676,12 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 		<div class="clearfix"></div>
 			<div class="footer-bottom">
 				<h2 ><a href="../temp/index.html"><b>T<br>H<br>E</b>Railway Bazaar<span>The Best Supermarket</span></a></h2>
-				<p class="fo-para">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
+				<p class="fo-para"></p>
 				<ul class="social-fo">
-					<li><a href="../temp/#" class=" face"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-					<li><a href="../temp/#" class=" twi"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-					<li><a href="../temp/#" class=" pin"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
-					<li><a href="../temp/#" class=" dri"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+					<li><a href="#" class=" face"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+					<li><a href="#" class=" twi"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+					<li><a href="#" class=" pin"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
+					<li><a href="#" class=" dri"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
 				</ul>
 				<div class=" address">
 					<div class="col-md-4 fo-grid1">
@@ -692,7 +691,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 							<p><i class="fa fa-phone" aria-hidden="true"></i>+1234 758 839 , +1273 748 730</p>	
 					</div>
 					<div class="col-md-4 fo-grid1">
-						<p><a href="../temp/mailto:info@example.com"><i class="fa fa-envelope-o" aria-hidden="true"></i>info@example1.com</a></p>
+						<p><a href="#"><i class="fa fa-envelope-o" aria-hidden="true"></i>info@example1.com</a></p>
 					</div>
 					<div class="clearfix"></div>
 					
