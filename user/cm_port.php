@@ -32,7 +32,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE html>
 <html>
 <head>
-<title>Big store a Ecommerce Online Shopping Category Flat Bootstrap Responsive Website Template | Contact :: w3layouts</title>
+<title>Railway Bazaar</title>
 <!-- for-mobile-apps -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -107,7 +107,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 <div class="contact">
 	<div class="container">
 		<div class="spec ">
-			<h3>Post your Complient</h3>
+			<h3>Post your Complaints</h3>
 				<div class="ser-t">
 					<b></b>
 					<span><i></i></span>
@@ -271,44 +271,42 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 	<div class="container">
 		<div class="col-md-3 footer-grid">
 			<h3>About Us</h3>
-			<p>Nam libero tempore, cum soluta nobis est eligendi 
-				optio cumque nihil impedit quo minus id quod maxime 
-				placeat facere possimus.</p>
+			<p>Railway Bazaar is an online shopping site that can be used for shopping while traveling on the train. It is exclusively created for the passengers who travel through train.</p>
 		</div>
 		<div class="col-md-3 footer-grid ">
 			<h3>Menu</h3>
 			<ul>
-				<li><a href="../temp/index.html">Home</a></li>
-				<li><a href="../temp/kitchen.html">Kitchen</a></li>
-				<li><a href="../temp/care.html">Personal Care</a></li>
-				<li><a href="../temp/hold.html">Household</a></li>						 
-				<li><a href="../temp/codes.html">Short Codes</a></li> 
-				<li><a href="../temp/contact.html">Contact</a></li>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Kitchen</a></li>
+				<li><a href="#">Personal Care</a></li>
+				<li><a href="#">Household</a></li>						 
+				<li><a href="#">Short Codes</a></li> 
+				<li><a href="#">Contact</a></li>
 			</ul>
 		</div>
 		<div class="col-md-3 footer-grid ">
 			<h3>Customer Services</h3>
 			<ul>
-				<li><a href="../temp/shipping.html">Shipping</a></li>
-				<li><a href="../temp/terms.html">Terms & Conditions</a></li>
-				<li><a href="../temp/faqs.html">Faqs</a></li>
-				<li><a href="../temp/contact.html">Contact</a></li>
-				<li><a href="../temp/offer.html">Online Shopping</a></li>						 
+				<li><a href="#">Shipping</a></li>
+				<li><a href="#">Terms & Conditions</a></li>
+				<li><a href="#">Faqs</a></li>
+				<li><a href="#">Contact</a></li>
+				<li><a href="#">Online Shopping</a></li>						 
 				 
 			</ul>
 		</div>
 		<div class="col-md-3 footer-grid">
 			<h3>My Account</h3>
 			<ul>
-				<li><a href="../temp/login.html">Login</a></li>
-				<li><a href="../temp/register.html">Register</a></li>
-				<li><a href="../temp/wishlist.html">Wishlist</a></li>
+				<li><a href="#">Login</a></li>
+				<li><a href="#">Register</a></li>
+				<li><a href="#">Wishlist</a></li>
 				
 			</ul>
 		</div>
 		<div class="clearfix"></div>
 			<div class="footer-bottom">
-				<h2 ><a href="../temp/index.html"><b>T<br>H<br>E</b>Big Store<span>The Best Supermarket</span></a></h2>
+				<h2 ><a href="../temp/index.html"><b>T<br>H<br>E</b>Railway Bazaar<span>The Best Supermarket</span></a></h2>
 				<p class="fo-para">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
 				<ul class="social-fo">
 					<li><a href="../temp/#" class=" face"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
@@ -331,7 +329,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 					</div>
 			</div>
 		<div class="copy-right">
-			<p> &copy; 2016 Big store. All Rights Reserved | Design by  <a href="../temp/http://w3layouts.com/"> W3layouts</a></p>
+			<p></p>
 		</div>
 	</div>
 </div>
