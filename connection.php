@@ -1,4 +1,4 @@
 <?php
 // Database connection
-$con=mysqli_connect("localhost","root","","rail");
+$con=mysqli_connect("localhost","root","","rail3");
 ?>
